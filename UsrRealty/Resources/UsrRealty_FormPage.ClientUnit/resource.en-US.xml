@@ -3,6 +3,14 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Realty form page" />
+			<Item Name="LocalizableStrings.addRecord_4nh0gax_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_btay9cs_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_ebbe7fp_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_hdkzgek_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_ism5rjn_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_mvujapq_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_ubt4zk2_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_uetlkzr_caption.Value" Value="Add new" />
 		</Items>
 	</Group>
 </Resources>
