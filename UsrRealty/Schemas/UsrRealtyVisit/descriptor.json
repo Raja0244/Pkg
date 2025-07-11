@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "e606eb45-433c-42cf-bad8-e456abc0824d",
+    "Name": "UsrRealtyVisit",
+    "ModifiedOnUtc": "\/Date(1752257696000)\/",
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Realty Visit",
+    "DependsOn": []
+  }
+}

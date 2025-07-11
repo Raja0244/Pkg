@@ -240,6 +240,53 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
 				"index": 4
+			},
+			{
+				"operation": "insert",
+				"name": "DataGrid_mi9s3ko",
+				"values": {
+					"type": "crt.DataGrid",
+					"features": {
+						"rows": {
+							"selection": {
+								"enable": true,
+								"multiple": true
+							}
+						}
+					},
+					"items": "$DataGrid_mi9s3ko",
+					"primaryColumnName": "DataGrid_mi9s3koDS_UsrId",
+					"columns": [
+						{
+							"id": "d45b2d3e-d6e7-7d3b-4afe-a0e4e4df0b98",
+							"code": "DataGrid_mi9s3koDS_UsrVisitDateTime",
+							"caption": "#ResourceString(DataGrid_mi9s3koDS_UsrVisitDateTime)#",
+							"dataValueType": 7
+						},
+						{
+							"id": "a449c074-b5b8-f03e-95b5-5338c34b05bb",
+							"code": "DataGrid_mi9s3koDS_UsrPotentialCustomer",
+							"caption": "#ResourceString(DataGrid_mi9s3koDS_UsrPotentialCustomer)#",
+							"dataValueType": 28
+						},
+						{
+							"id": "26dad0e9-9f77-ab65-6c8a-71d66ae67961",
+							"code": "DataGrid_mi9s3koDS_UsrOwner",
+							"caption": "#ResourceString(DataGrid_mi9s3koDS_UsrOwner)#",
+							"dataValueType": 28
+						},
+						{
+							"id": "b0615aeb-2d78-f97d-b1da-dbb8b9481077",
+							"code": "DataGrid_mi9s3koDS_UsrComment",
+							"caption": "#ResourceString(DataGrid_mi9s3koDS_UsrComment)#",
+							"dataValueType": 28
+						}
+					],
+					"placeholder": false
+				},
+				"parentName": "GeneralInfoTab",
+				"propertyName": "items",
+				"index": 1
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -293,6 +340,41 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"modelConfig": {
 							"path": "PDS.UsrNumber"
 						}
+					},
+					"DataGrid_mi9s3ko": {
+						"isCollection": true,
+						"modelConfig": {
+							"path": "DataGrid_mi9s3koDS"
+						},
+						"viewModelConfig": {
+							"attributes": {
+								"DataGrid_mi9s3koDS_UsrVisitDateTime": {
+									"modelConfig": {
+										"path": "DataGrid_mi9s3koDS.UsrVisitDateTime"
+									}
+								},
+								"DataGrid_mi9s3koDS_UsrPotentialCustomer": {
+									"modelConfig": {
+										"path": "DataGrid_mi9s3koDS.UsrPotentialCustomer"
+									}
+								},
+								"DataGrid_mi9s3koDS_UsrOwner": {
+									"modelConfig": {
+										"path": "DataGrid_mi9s3koDS.UsrOwner"
+									}
+								},
+								"DataGrid_mi9s3koDS_UsrComment": {
+									"modelConfig": {
+										"path": "DataGrid_mi9s3koDS.UsrComment"
+									}
+								},
+								"DataGrid_mi9s3koDS_UsrId": {
+									"modelConfig": {
+										"path": "DataGrid_mi9s3koDS.UsrId"
+									}
+								}
+							}
+						}
 					}
 				}
 			},
@@ -328,6 +410,27 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 							"entitySchemaName": "UsrRealty"
 						},
 						"scope": "page"
+					},
+					"DataGrid_mi9s3koDS": {
+						"type": "crt.EntityDataSource",
+						"scope": "viewElement",
+						"config": {
+							"entitySchemaName": "UsrRealtyVisit",
+							"attributes": {
+								"UsrVisitDateTime": {
+									"path": "UsrVisitDateTime"
+								},
+								"UsrPotentialCustomer": {
+									"path": "UsrPotentialCustomer"
+								},
+								"UsrOwner": {
+									"path": "UsrOwner"
+								},
+								"UsrComment": {
+									"path": "UsrComment"
+								}
+							}
+						}
 					}
 				}
 			}

@@ -1,0 +1,122 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "EntitySchemaManager",
+      "UId": "e606eb45-433c-42cf-bad8-e456abc0824d",
+      "A2": "UsrRealtyVisit",
+      "A5": "2cddeb2f-3256-4adf-be8f-df878529156c",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "e65f3d18-3638-471c-a4c3-c92c526cd3b6",
+      "B8": "8.2.3.1351",
+      "EG1": {
+        "UId": "a3766954-492a-4acb-bbcc-386ae0dd4117",
+        "A2": "UsrEntity_9638348EventsProcess",
+        "A5": "2cddeb2f-3256-4adf-be8f-df878529156c",
+        "B1": [],
+        "B2": [],
+        "B3": [],
+        "B8": "8.2.3.1351",
+        "FJ1": [],
+        "IJ3": false,
+        "BK8": "bb4d6607-026b-4b27-b640-8f5c77c1e89d",
+        "BK15": [],
+        "BK37": {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "cdd58be7-2dba-4a5e-869b-1ad5d6d7513a",
+          "A2": "NotificationCaption",
+          "A3": "bb4d6607-026b-4b27-b640-8f5c77c1e89d",
+          "A4": "bb4d6607-026b-4b27-b640-8f5c77c1e89d",
+          "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+          "L8": {
+            "GS1": 3,
+            "GS2": "[#[PropertyValue:Caption]#]"
+          }
+        },
+        "BK1": "FFFFFFFF",
+        "BK2": "FFBBBBBB",
+        "BK3": [],
+        "BK5": [],
+        "BK4": [],
+        "BK9": [],
+        "BK10": true,
+        "BK34": "null",
+        "Labels": [],
+        "BK24": [],
+        "JC1": []
+      },
+      "D10": true,
+      "D8": "1b56b061-4e91-4974-9038-df8340e534f2",
+      "D29": "null",
+      "D30": "null",
+      "D31": "null",
+      "D38": true,
+      "D3": "e6f7476f-b94c-e73e-f483-edb8580dc628",
+      "D2": [
+        {
+          "UId": "06f2094d-d996-a037-ac6f-23573770e0b5",
+          "A2": "UsrComment",
+          "A3": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A4": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A5": "2cddeb2f-3256-4adf-be8f-df878529156c",
+          "S2": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+        },
+        {
+          "UId": "9176c020-08a0-ddb9-985f-ced2a80efe53",
+          "A2": "UsrOwner",
+          "A3": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A4": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A5": "2cddeb2f-3256-4adf-be8f-df878529156c",
+          "S2": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+        },
+        {
+          "UId": "52484157-a1ff-2dfe-a02c-b1082a029f3d",
+          "A2": "UsrVisitDateTime",
+          "A3": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A4": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A5": "2cddeb2f-3256-4adf-be8f-df878529156c",
+          "S2": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+        },
+        {
+          "UId": "8e788187-ec72-c644-561d-914738ec1d02",
+          "A2": "UsrPotentialCustomer",
+          "A3": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A4": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A5": "2cddeb2f-3256-4adf-be8f-df878529156c",
+          "S2": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+        },
+        {
+          "UId": "e6f7476f-b94c-e73e-f483-edb8580dc628",
+          "A2": "UsrId",
+          "A3": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A4": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A5": "2cddeb2f-3256-4adf-be8f-df878529156c",
+          "S2": "23018567-a13c-4320-8687-fd6f9e3699bd"
+        },
+        {
+          "UId": "ce500996-6c46-eb82-fc39-85cabd062734",
+          "A2": "UsrRealty",
+          "A3": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A4": "e606eb45-433c-42cf-bad8-e456abc0824d",
+          "A5": "2cddeb2f-3256-4adf-be8f-df878529156c",
+          "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+          "S4": "0155643a-18df-4e60-a5e9-3438ef83c4d7",
+          "E6": true,
+          "E20": true,
+          "E17": "UsrRealtyId",
+          "E18": "UsrRealtyUsrName"
+        }
+      ],
+      "D6": [],
+      "D20": {
+        "A2": "UsrRealtyVisitEvents"
+      },
+      "D35": {},
+      "D36": {
+        "A3": "e606eb45-433c-42cf-bad8-e456abc0824d",
+        "BS1": false
+      }
+    }
+  }
+}
