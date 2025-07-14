@@ -15,6 +15,7 @@
 			<Item Name="LocalizableStrings.addRecord_wircow2_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.Area_placeholder.Value" Value="Area should not be blank or zero" />
 			<Item Name="LocalizableStrings.Button_jjiacki_caption.Value" Value="Push me!" />
+			<Item Name="LocalizableStrings.NumberInput_52gi9tg_label.Value" Value="Number" />
 			<Item Name="LocalizableStrings.Price_placeholder.Value" Value="Please enter Price more than zero" />
 		</Items>
 	</Group>

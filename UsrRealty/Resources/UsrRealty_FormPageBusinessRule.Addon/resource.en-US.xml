@@ -3,8 +3,8 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="AddonConfig.Rules.541ac620-a099-4cf2-c565-f1f0b9b1e2d3.Caption" Value="Hide elements: Comment" />
+			<Item Name="AddonConfig.Rules.65a5dac0-1ad7-ce9c-8e08-f450ae6a79b5.Caption" Value="Show elements: Commission, USD" />
 			<Item Name="AddonConfig.Rules.9fe2849d-a49b-a056-3eb7-e11f1786065c.Caption" Value="Make elements required: Comment" />
-			<Item Name="AddonConfig.Rules.d0a58e26-a834-6a56-798b-682e80fc9b62.Caption" Value="Show elements: Commission, USD" />
 			<Item Name="Caption" Value="Realty form page (Business rules)" />
 		</Items>
 	</Group>
