@@ -3,6 +3,55 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "merge",
+				"name": "CardContentWrapper",
+				"values": {
+					"padding": {
+						"left": "small",
+						"right": "small",
+						"top": "none",
+						"bottom": "none"
+					},
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"alignItems": "stretch"
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "Tabs",
+				"values": {
+					"styleType": "default",
+					"mode": "tab",
+					"bodyBackgroundColor": "primary-contrast-500",
+					"selectedTabTitleColor": "auto",
+					"tabTitleColor": "auto",
+					"underlineSelectedTabColor": "auto",
+					"headerBackgroundColor": "auto"
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "GeneralInfoTabContainer",
+				"values": {
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "none",
+						"left": "none"
+					},
+					"alignItems": "stretch"
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "CardToggleTabPanel",
 				"values": {
 					"styleType": "default",
@@ -35,6 +84,28 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						}
 					]
 				}
+			},
+			{
+				"operation": "insert",
+				"name": "Button_jjiacki",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_jjiacki_caption)#",
+					"color": "outline",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"clicked": {
+						"request": "usr.PushButtonRequest"
+					},
+					"clickMode": "default",
+					"icon": "settings-button-icon",
+					"menuItems": []
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 0
 			},
 			{
 				"operation": "insert",
@@ -88,7 +159,11 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 					"type": "crt.NumberInput",
 					"label": "$Resources.Strings.PDS_UsrPrice_u9v5vf8",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrPrice_u9v5vf8"
+					"control": "$PDS_UsrPrice_u9v5vf8",
+					"visible": true,
+					"readonly": false,
+					"placeholder": "#ResourceString(Price_placeholder)#",
+					"tooltip": ""
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
@@ -107,11 +182,36 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 					"type": "crt.NumberInput",
 					"label": "$Resources.Strings.PDS_UsrArea_n15jun5",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrArea_n15jun5"
+					"control": "$PDS_UsrArea_n15jun5",
+					"visible": true,
+					"readonly": false,
+					"placeholder": "#ResourceString(Area_placeholder)#",
+					"tooltip": ""
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
 				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "Commission",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 5,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrCommission_2ik3wem",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrCommission_2ik3wem",
+					"readonly": true,
+					"visible": false
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 4
 			},
 			{
 				"operation": "insert",
@@ -176,7 +276,11 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"row": 2,
 						"colSpan": 1,
 						"rowSpan": 1
-					}
+					},
+					"visible": false,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": ""
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
@@ -223,11 +327,65 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 			},
 			{
 				"operation": "insert",
-				"name": "Number",
+				"name": "Country",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 3,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_UsrCountry_ick81xw",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrCountry_ick81xw",
+					"listActions": [],
+					"showValueAsLink": true,
+					"controlActions": [],
+					"visible": true,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": "",
+					"valueDetails": null
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 4
+			},
+			{
+				"operation": "insert",
+				"name": "City",
 				"values": {
 					"layoutConfig": {
 						"column": 2,
 						"row": 3,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_UsrCity_nedqbvr",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrCity_nedqbvr",
+					"listActions": [],
+					"showValueAsLink": true,
+					"controlActions": [],
+					"visible": true,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": "",
+					"valueDetails": null
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 5
+			},
+			{
+				"operation": "insert",
+				"name": "Number",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
+						"row": 4,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -239,54 +397,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 4
-			},
-			{
-				"operation": "insert",
-				"name": "DataGrid_mi9s3ko",
-				"values": {
-					"type": "crt.DataGrid",
-					"features": {
-						"rows": {
-							"selection": {
-								"enable": true,
-								"multiple": true
-							}
-						}
-					},
-					"items": "$DataGrid_mi9s3ko",
-					"primaryColumnName": "DataGrid_mi9s3koDS_UsrId",
-					"columns": [
-						{
-							"id": "d45b2d3e-d6e7-7d3b-4afe-a0e4e4df0b98",
-							"code": "DataGrid_mi9s3koDS_UsrVisitDateTime",
-							"caption": "#ResourceString(DataGrid_mi9s3koDS_UsrVisitDateTime)#",
-							"dataValueType": 7
-						},
-						{
-							"id": "a449c074-b5b8-f03e-95b5-5338c34b05bb",
-							"code": "DataGrid_mi9s3koDS_UsrPotentialCustomer",
-							"caption": "#ResourceString(DataGrid_mi9s3koDS_UsrPotentialCustomer)#",
-							"dataValueType": 28
-						},
-						{
-							"id": "26dad0e9-9f77-ab65-6c8a-71d66ae67961",
-							"code": "DataGrid_mi9s3koDS_UsrOwner",
-							"caption": "#ResourceString(DataGrid_mi9s3koDS_UsrOwner)#",
-							"dataValueType": 28
-						},
-						{
-							"id": "b0615aeb-2d78-f97d-b1da-dbb8b9481077",
-							"code": "DataGrid_mi9s3koDS_UsrComment",
-							"caption": "#ResourceString(DataGrid_mi9s3koDS_UsrComment)#",
-							"dataValueType": 28
-						}
-					],
-					"placeholder": false
-				},
-				"parentName": "GeneralInfoTab",
-				"propertyName": "items",
-				"index": 1
+				"index": 6
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -341,39 +452,19 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 							"path": "PDS.UsrNumber"
 						}
 					},
-					"DataGrid_mi9s3ko": {
-						"isCollection": true,
+					"PDS_UsrCity_nedqbvr": {
 						"modelConfig": {
-							"path": "DataGrid_mi9s3koDS"
-						},
-						"viewModelConfig": {
-							"attributes": {
-								"DataGrid_mi9s3koDS_UsrVisitDateTime": {
-									"modelConfig": {
-										"path": "DataGrid_mi9s3koDS.UsrVisitDateTime"
-									}
-								},
-								"DataGrid_mi9s3koDS_UsrPotentialCustomer": {
-									"modelConfig": {
-										"path": "DataGrid_mi9s3koDS.UsrPotentialCustomer"
-									}
-								},
-								"DataGrid_mi9s3koDS_UsrOwner": {
-									"modelConfig": {
-										"path": "DataGrid_mi9s3koDS.UsrOwner"
-									}
-								},
-								"DataGrid_mi9s3koDS_UsrComment": {
-									"modelConfig": {
-										"path": "DataGrid_mi9s3koDS.UsrComment"
-									}
-								},
-								"DataGrid_mi9s3koDS_UsrId": {
-									"modelConfig": {
-										"path": "DataGrid_mi9s3koDS.UsrId"
-									}
-								}
-							}
+							"path": "PDS.UsrCity"
+						}
+					},
+					"PDS_UsrCountry_ick81xw": {
+						"modelConfig": {
+							"path": "PDS.UsrCountry"
+						}
+					},
+					"PDS_UsrCommission_2ik3wem": {
+						"modelConfig": {
+							"path": "PDS.UsrCommission"
 						}
 					}
 				}
@@ -410,32 +501,25 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 							"entitySchemaName": "UsrRealty"
 						},
 						"scope": "page"
-					},
-					"DataGrid_mi9s3koDS": {
-						"type": "crt.EntityDataSource",
-						"scope": "viewElement",
-						"config": {
-							"entitySchemaName": "UsrRealtyVisit",
-							"attributes": {
-								"UsrVisitDateTime": {
-									"path": "UsrVisitDateTime"
-								},
-								"UsrPotentialCustomer": {
-									"path": "UsrPotentialCustomer"
-								},
-								"UsrOwner": {
-									"path": "UsrOwner"
-								},
-								"UsrComment": {
-									"path": "UsrComment"
-								}
-							}
-						}
 					}
 				}
 			}
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
-		handlers: /**SCHEMA_HANDLERS*/[]/**SCHEMA_HANDLERS*/,
+		handlers: /**SCHEMA_HANDLERS*/[
+			{
+				request: "usr.PushButtonRequest",
+				/* Implementation of the custom query handler. */
+				handler: async (request, next) => {
+					console.log("Button works...");
+					Terrasoft.showInformation("My button was pressed.");
+					var price = await request.$context.PDS_UsrPrice_u9v5vf8;
+					console.log("Price = " + price);
+					request.$context.PDS_UsrArea_n15jun5 = 250;
+					/* Call the next handler if it exists and return its result. */
+					return next?.handle(request);
+				}
+			},
+		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
 	};

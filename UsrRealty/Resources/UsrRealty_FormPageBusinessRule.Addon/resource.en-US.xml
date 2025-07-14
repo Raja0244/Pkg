@@ -2,7 +2,9 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
-			<Item Name="AddonConfig.Rules.71f22050-4b1f-b139-a1d5-43e91773c3ac.Caption" Value="Make elements required: Comment" />
+			<Item Name="AddonConfig.Rules.541ac620-a099-4cf2-c565-f1f0b9b1e2d3.Caption" Value="Hide elements: Comment" />
+			<Item Name="AddonConfig.Rules.9fe2849d-a49b-a056-3eb7-e11f1786065c.Caption" Value="Make elements required: Comment" />
+			<Item Name="AddonConfig.Rules.d0a58e26-a834-6a56-798b-682e80fc9b62.Caption" Value="Show elements: Commission, USD" />
 			<Item Name="Caption" Value="Realty form page (Business rules)" />
 		</Items>
 	</Group>
