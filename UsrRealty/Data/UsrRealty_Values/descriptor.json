@@ -1,0 +1,77 @@
+﻿{
+  "Descriptor": {
+    "UId": "4cb9fca3-6e91-4937-9026-cc04ae193c3a",
+    "Name": "UsrRealty_Values",
+    "ModifiedOnUtc": "\/Date(1752583645000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "4cb9fca3-6e91-4937-9026-cc04ae193c3a",
+      "Name": "UsrRealty"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ce690eaa-4edf-4c82-94ec-b1140df2b985",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "UsrName",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "d1c282ab-bd11-1b65-cee9-533387c304c4",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "UsrTitle",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "4ebd740b-12f7-85a5-1831-c80aa6ecef7a",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "UsrComment",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "9928edec-4272-425a-93bb-48743fee4b04",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "ModifiedOn",
+        "DataTypeValueUId": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+      },
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "44d190e1-cd7a-f7d2-0586-e6583f9a1218",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "UsrCommission",
+        "DataTypeValueUId": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
+      },
+      {
+        "ColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "CreatedOn",
+        "DataTypeValueUId": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+      },
+      {
+        "ColumnUId": "312b9f49-5243-41cc-d705-71ee689015d4",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "UsrArea",
+        "DataTypeValueUId": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
+      },
+      {
+        "ColumnUId": "3e9ec80f-364c-2892-5d86-1f6011f8790c",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "UsrPrice",
+        "DataTypeValueUId": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
+      }
+    ]
+  }
+}

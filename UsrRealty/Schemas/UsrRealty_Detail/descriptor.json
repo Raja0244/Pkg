@@ -1,8 +1,8 @@
 ﻿{
   "Descriptor": {
-    "UId": "d52bd5c8-b795-4419-8d31-84cf487ccfc4",
+    "UId": "6d38ae7d-b0f0-4385-a349-0a74fa1f7763",
     "Name": "UsrRealty_Detail",
-    "ModifiedOnUtc": "\/Date(1752041493000)\/",
+    "ModifiedOnUtc": "\/Date(1752581231000)\/",
     "Parent": {
       "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
       "Name": "BaseGridDetailV2"

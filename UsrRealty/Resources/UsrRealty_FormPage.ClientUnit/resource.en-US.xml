@@ -3,20 +3,18 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Realty form page" />
-			<Item Name="LocalizableStrings.addRecord_4nh0gax_caption.Value" Value="Add new" />
-			<Item Name="LocalizableStrings.addRecord_5076r01_caption.Value" Value="Add new" />
-			<Item Name="LocalizableStrings.addRecord_btay9cs_caption.Value" Value="Add new" />
-			<Item Name="LocalizableStrings.addRecord_ebbe7fp_caption.Value" Value="Add new" />
-			<Item Name="LocalizableStrings.addRecord_hdkzgek_caption.Value" Value="Add new" />
-			<Item Name="LocalizableStrings.addRecord_ism5rjn_caption.Value" Value="Add new" />
-			<Item Name="LocalizableStrings.addRecord_mvujapq_caption.Value" Value="Add new" />
-			<Item Name="LocalizableStrings.addRecord_ubt4zk2_caption.Value" Value="Add new" />
-			<Item Name="LocalizableStrings.addRecord_uetlkzr_caption.Value" Value="Add new" />
-			<Item Name="LocalizableStrings.addRecord_wircow2_caption.Value" Value="Add new" />
-			<Item Name="LocalizableStrings.Area_placeholder.Value" Value="Area should not be blank or zero" />
-			<Item Name="LocalizableStrings.Button_jjiacki_caption.Value" Value="Push me!" />
-			<Item Name="LocalizableStrings.NumberInput_52gi9tg_label.Value" Value="Number" />
-			<Item Name="LocalizableStrings.Price_placeholder.Value" Value="Please enter Price more than zero" />
+			<Item Name="LocalizableStrings.addRecord_4tltmc8_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_52tysr7_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_d203wn4_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_erpdrsl_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_jo9yxw0_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_si7qd2o_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_x9va0oo_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_yp9ghn2_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_zrxxr1u_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.AreaCannotBeLess.Value" Value="Area must be greater than Zero sq.m." />
+			<Item Name="LocalizableStrings.NumberInput_wnj6n4r_label.Value" Value="Number" />
+			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price must be greater than Zero" />
 		</Items>
 	</Group>
 </Resources>

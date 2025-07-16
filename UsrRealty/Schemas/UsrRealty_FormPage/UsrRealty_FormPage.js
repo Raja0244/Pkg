@@ -3,55 +3,6 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "merge",
-				"name": "CardContentWrapper",
-				"values": {
-					"padding": {
-						"left": "small",
-						"right": "small",
-						"top": "none",
-						"bottom": "none"
-					},
-					"visible": true,
-					"color": "transparent",
-					"borderRadius": "none",
-					"alignItems": "stretch"
-				}
-			},
-			{
-				"operation": "merge",
-				"name": "Tabs",
-				"values": {
-					"styleType": "default",
-					"mode": "tab",
-					"bodyBackgroundColor": "primary-contrast-500",
-					"selectedTabTitleColor": "auto",
-					"tabTitleColor": "auto",
-					"underlineSelectedTabColor": "auto",
-					"headerBackgroundColor": "auto"
-				}
-			},
-			{
-				"operation": "merge",
-				"name": "GeneralInfoTabContainer",
-				"values": {
-					"gap": {
-						"columnGap": "large",
-						"rowGap": "none"
-					},
-					"visible": true,
-					"color": "transparent",
-					"borderRadius": "none",
-					"padding": {
-						"top": "none",
-						"right": "none",
-						"bottom": "none",
-						"left": "none"
-					},
-					"alignItems": "stretch"
-				}
-			},
-			{
-				"operation": "merge",
 				"name": "CardToggleTabPanel",
 				"values": {
 					"styleType": "default",
@@ -76,7 +27,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 				"values": {
 					"columns": [
 						{
-							"id": "942e39be-50e0-428b-b04d-78ee7210a11a",
+							"id": "f283073c-57ab-4461-bc70-61c84f24ecf8",
 							"code": "AttachmentListDS_Name",
 							"caption": "#ResourceString(AttachmentListDS_Name)#",
 							"dataValueType": 28,
@@ -84,28 +35,6 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						}
 					]
 				}
-			},
-			{
-				"operation": "insert",
-				"name": "Button_jjiacki",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_jjiacki_caption)#",
-					"color": "outline",
-					"disabled": false,
-					"size": "medium",
-					"iconPosition": "left-icon",
-					"visible": true,
-					"clicked": {
-						"request": "usr.PushButtonRequest"
-					},
-					"clickMode": "default",
-					"icon": "settings-button-icon",
-					"menuItems": []
-				},
-				"parentName": "CardToggleContainer",
-				"propertyName": "items",
-				"index": 0
 			},
 			{
 				"operation": "insert",
@@ -137,10 +66,10 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"rowSpan": 1
 					},
 					"type": "crt.Input",
-					"label": "$Resources.Strings.PDS_UsrTitle_f843yd7",
+					"multiline": false,
+					"label": "$Resources.Strings.PDS_UsrTitle_hdvy2rb",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrTitle_f843yd7",
-					"multiline": false
+					"control": "$PDS_UsrTitle_hdvy2rb"
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
@@ -157,13 +86,9 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"rowSpan": 1
 					},
 					"type": "crt.NumberInput",
-					"label": "$Resources.Strings.PDS_UsrPrice_u9v5vf8",
+					"label": "$Resources.Strings.PDS_UsrPrice_b1j1ilr",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrPrice_u9v5vf8",
-					"visible": true,
-					"readonly": false,
-					"placeholder": "#ResourceString(Price_placeholder)#",
-					"tooltip": ""
+					"control": "$PDS_UsrPrice_b1j1ilr"
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
@@ -180,13 +105,9 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"rowSpan": 1
 					},
 					"type": "crt.NumberInput",
-					"label": "$Resources.Strings.PDS_UsrArea_n15jun5",
+					"label": "$Resources.Strings.PDS_UsrArea_wpc1znq",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrArea_n15jun5",
-					"visible": true,
-					"readonly": false,
-					"placeholder": "#ResourceString(Area_placeholder)#",
-					"tooltip": ""
+					"control": "$PDS_UsrArea_wpc1znq"
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
@@ -203,11 +124,11 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"rowSpan": 1
 					},
 					"type": "crt.NumberInput",
-					"label": "$Resources.Strings.PDS_UsrCommission_2ik3wem",
+					"label": "$Resources.Strings.PDS_UsrCommission_mxsbnle",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrCommission_2ik3wem",
+					"control": "$PDS_UsrCommission_mxsbnle",
+					"visible": true,
 					"readonly": true,
-					"visible": false,
 					"placeholder": "",
 					"tooltip": ""
 				},
@@ -217,7 +138,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 			},
 			{
 				"operation": "insert",
-				"name": "ComboBox_s7o4ty8",
+				"name": "Type",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -226,17 +147,16 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"rowSpan": 1
 					},
 					"type": "crt.ComboBox",
-					"label": "$Resources.Strings.PDS_UsrType_h74lwfq",
+					"label": "$Resources.Strings.PDS_UsrType_bf9dwtf",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrType_h74lwfq",
+					"control": "$PDS_UsrType_bf9dwtf",
 					"listActions": [],
 					"showValueAsLink": true,
 					"controlActions": [],
 					"visible": true,
 					"readonly": false,
 					"placeholder": "",
-					"tooltip": "",
-					"valueDetails": null
+					"tooltip": ""
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
@@ -253,94 +173,9 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"rowSpan": 1
 					},
 					"type": "crt.ComboBox",
-					"label": "$Resources.Strings.PDS_UsrOfferType_ztq9prh",
+					"label": "$Resources.Strings.PDS_UsrOfferType_nq58gui",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrOfferType_ztq9prh",
-					"listActions": [],
-					"showValueAsLink": true,
-					"controlActions": []
-				},
-				"parentName": "GeneralInfoTabContainer",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
-				"name": "Comment",
-				"values": {
-					"type": "crt.Input",
-					"label": "$Resources.Strings.PDS_UsrComment_fxsqlyn",
-					"labelPosition": "auto",
-					"control": "$PDS_UsrComment_fxsqlyn",
-					"multiline": false,
-					"layoutConfig": {
-						"column": 1,
-						"row": 2,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"visible": true,
-					"readonly": false,
-					"placeholder": "",
-					"tooltip": ""
-				},
-				"parentName": "GeneralInfoTabContainer",
-				"propertyName": "items",
-				"index": 2
-			},
-			{
-				"operation": "insert",
-				"name": "Manager",
-				"values": {
-					"layoutConfig": {
-						"column": 2,
-						"row": 2,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"type": "crt.ComboBox",
-					"label": "$Resources.Strings.PDS_UsrManager_w2q687b",
-					"labelPosition": "auto",
-					"control": "$PDS_UsrManager_w2q687b",
-					"listActions": [],
-					"showValueAsLink": true,
-					"controlActions": []
-				},
-				"parentName": "GeneralInfoTabContainer",
-				"propertyName": "items",
-				"index": 3
-			},
-			{
-				"operation": "insert",
-				"name": "addRecord_ubt4zk2",
-				"values": {
-					"code": "addRecord",
-					"type": "crt.ComboboxSearchTextAction",
-					"icon": "combobox-add-new",
-					"caption": "#ResourceString(addRecord_ubt4zk2_caption)#",
-					"clicked": {
-						"request": "crt.CreateRecordFromLookupRequest",
-						"params": {}
-					}
-				},
-				"parentName": "Manager",
-				"propertyName": "listActions",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "Country",
-				"values": {
-					"layoutConfig": {
-						"column": 1,
-						"row": 3,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"type": "crt.ComboBox",
-					"label": "$Resources.Strings.PDS_UsrCountry_ick81xw",
-					"labelPosition": "auto",
-					"control": "$PDS_UsrCountry_ick81xw",
+					"control": "$PDS_UsrOfferType_nq58gui",
 					"listActions": [],
 					"showValueAsLink": true,
 					"controlActions": [],
@@ -352,11 +187,85 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 4
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Country",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 2,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_UsrCountry_ytotl53",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrCountry_ytotl53",
+					"listActions": [],
+					"showValueAsLink": true,
+					"controlActions": [],
+					"visible": true,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": "",
+					"valueDetails": null
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 2
 			},
 			{
 				"operation": "insert",
 				"name": "City",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
+						"row": 2,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_UsrCity_8hhpa2s",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrCity_8hhpa2s",
+					"listActions": [],
+					"showValueAsLink": true,
+					"controlActions": [],
+					"visible": true,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": "",
+					"valueDetails": null
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "Comment",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 3,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.Input",
+					"label": "$Resources.Strings.PDS_UsrComment_g9h14v8",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrComment_g9h14v8",
+					"multiline": false
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 4
+			},
+			{
+				"operation": "insert",
+				"name": "Manager",
 				"values": {
 					"layoutConfig": {
 						"column": 2,
@@ -365,9 +274,9 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"rowSpan": 1
 					},
 					"type": "crt.ComboBox",
-					"label": "$Resources.Strings.PDS_UsrCity_nedqbvr",
+					"label": "$Resources.Strings.PDS_UsrManager_s7goxp4",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrCity_nedqbvr",
+					"control": "$PDS_UsrManager_s7goxp4",
 					"listActions": [],
 					"showValueAsLink": true,
 					"controlActions": [],
@@ -392,10 +301,11 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"rowSpan": 1
 					},
 					"type": "crt.Input",
-					"label": "$Resources.Strings.PDS_UsrNumber_ltlf699",
+					"label": "$Resources.Strings.PDS_UsrNumber_equ7qnf",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrNumber_ltlf699",
-					"multiline": false
+					"control": "$PDS_UsrNumber_equ7qnf",
+					"multiline": false,
+					"readonly": true
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
@@ -403,7 +313,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 			},
 			{
 				"operation": "insert",
-				"name": "CommissionPercentUSD",
+				"name": "CommissionPercent",
 				"values": {
 					"layoutConfig": {
 						"column": 2,
@@ -412,8 +322,8 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"rowSpan": 1
 					},
 					"type": "crt.NumberInput",
-					"label": "$Resources.Strings.PDS_UsrOfferTypeUsrCommissionPercentUSD_9ybamxw",
-					"control": "$PDS_UsrOfferTypeUsrCommissionPercentUSD_9ybamxw",
+					"label": "$Resources.Strings.PDS_UsrOfferTypeUsrCommissionPercent_0mu9lpq",
+					"control": "$PDS_UsrOfferTypeUsrCommissionPercent_0mu9lpq",
 					"readonly": true,
 					"placeholder": "",
 					"labelPosition": "auto",
@@ -437,64 +347,82 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 							"path": "PDS.UsrName"
 						}
 					},
-					"PDS_UsrPrice_u9v5vf8": {
-						"modelConfig": {
-							"path": "PDS.UsrPrice"
-						}
-					},
-					"PDS_UsrArea_n15jun5": {
-						"modelConfig": {
-							"path": "PDS.UsrArea"
-						}
-					},
-					"PDS_UsrTitle_f843yd7": {
+					"PDS_UsrTitle_hdvy2rb": {
 						"modelConfig": {
 							"path": "PDS.UsrTitle"
 						}
 					},
-					"PDS_UsrType_h74lwfq": {
+					"PDS_UsrPrice_b1j1ilr": {
 						"modelConfig": {
-							"path": "PDS.UsrType"
+							"path": "PDS.UsrPrice"
+						},
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.DGValidator",
+								"params": {
+									"minValue": 0,
+									"message": "#ResourceString(PriceCannotBeLess)#"
+								}
+							}
 						}
 					},
-					"PDS_UsrOfferType_ztq9prh": {
+					"PDS_UsrArea_wpc1znq": {
 						"modelConfig": {
-							"path": "PDS.UsrOfferType"
+							"path": "PDS.UsrArea"
+						},
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.DGValidator",
+								"params": {
+									"minValue": 0,
+									"message": "#ResourceString(AreaCannotBeLess)#"
+								}
+							}
 						}
 					},
-					"PDS_UsrComment_fxsqlyn": {
-						"modelConfig": {
-							"path": "PDS.UsrComment"
-						}
-					},
-					"PDS_UsrManager_w2q687b": {
-						"modelConfig": {
-							"path": "PDS.UsrManager"
-						}
-					},
-					"PDS_UsrNumber_ltlf699": {
-						"modelConfig": {
-							"path": "PDS.UsrNumber"
-						}
-					},
-					"PDS_UsrCity_nedqbvr": {
-						"modelConfig": {
-							"path": "PDS.UsrCity"
-						}
-					},
-					"PDS_UsrCountry_ick81xw": {
-						"modelConfig": {
-							"path": "PDS.UsrCountry"
-						}
-					},
-					"PDS_UsrCommission_2ik3wem": {
+					"PDS_UsrCommission_mxsbnle": {
 						"modelConfig": {
 							"path": "PDS.UsrCommission"
 						}
 					},
-					"PDS_UsrOfferTypeUsrCommissionPercentUSD_9ybamxw": {
+					"PDS_UsrComment_g9h14v8": {
 						"modelConfig": {
-							"path": "PDS.UsrOfferTypeUsrCommissionPercentUSD_9ybamxw"
+							"path": "PDS.UsrComment"
+						}
+					},
+					"PDS_UsrOfferType_nq58gui": {
+						"modelConfig": {
+							"path": "PDS.UsrOfferType"
+						}
+					},
+					"PDS_UsrCountry_ytotl53": {
+						"modelConfig": {
+							"path": "PDS.UsrCountry"
+						}
+					},
+					"PDS_UsrCity_8hhpa2s": {
+						"modelConfig": {
+							"path": "PDS.UsrCity"
+						}
+					},
+					"PDS_UsrNumber_equ7qnf": {
+						"modelConfig": {
+							"path": "PDS.UsrNumber"
+						}
+					},
+					"PDS_UsrManager_s7goxp4": {
+						"modelConfig": {
+							"path": "PDS.UsrManager"
+						}
+					},
+					"PDS_UsrType_bf9dwtf": {
+						"modelConfig": {
+							"path": "PDS.UsrType"
+						}
+					},
+					"PDS_UsrOfferTypeUsrCommissionPercent_0mu9lpq": {
+						"modelConfig": {
+							"path": "PDS.UsrOfferTypeUsrCommissionPercent_0mu9lpq"
 						}
 					}
 				}
@@ -530,8 +458,12 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						"config": {
 							"entitySchemaName": "UsrRealty",
 							"attributes": {
-								"UsrOfferTypeUsrCommissionPercentUSD_9ybamxw": {
-									"path": "UsrOfferType.UsrCommissionPercentUSD",
+								"UsrCommissionPercentUsrCommissionPercent_ye9sp41": {
+									"path": "UsrCommissionPercent.UsrCommissionPercent",
+									"type": "ForwardReference"
+								},
+								"UsrOfferTypeUsrCommissionPercent_0mu9lpq": {
+									"path": "UsrOfferType.UsrCommissionPercent",
 									"type": "ForwardReference"
 								}
 							}
@@ -543,29 +475,15 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
 		handlers: /**SCHEMA_HANDLERS*/[
 			{
-				request: "usr.PushButtonRequest",
-				/* Implementation of the custom query handler. */
-				handler: async (request, next) => {
-					console.log("Button works...");
-					Terrasoft.showInformation("My button was pressed.");
-					var price = await request.$context.PDS_UsrPrice_u9v5vf8;
-					console.log("Price = " + price);
-					request.$context.PDS_UsrArea_n15jun5 = 250;
-					/* Call the next handler if it exists and return its result. */
-					return next?.handle(request);
-				}
-			},
-			{
 				request: "crt.HandleViewModelAttributeChangeRequest",
 				/* The custom implementation of the system query handler. */
 				handler: async (request, next) => {
-      					if (request.attributeName === 'PDS_UsrPrice_u9v5vf8' || 				             // if price changed
-					   request.attributeName === 'PDS_UsrOfferTypeUsrCommissionPercentUSD_9ybamxw' ) { 		// or percent changed
-						debugger;
-						var price = await request.$context.PDS_UsrPrice_u9v5vf8;
-						var percent = await request.$context.PDS_UsrOfferTypeUsrCommissionPercentUSD_9ybamxw;
+      					if (request.attributeName === 'PDS_UsrPrice_b1j1ilr' || 				             // if price changed
+					   request.attributeName === 'PDS_UsrOfferTypeUsrCommissionPercent_0mu9lpq' ) { 		// or percent changed
+						var price = await request.$context.PDS_UsrPrice_b1j1ilr;
+						var percent = await request.$context.PDS_UsrOfferTypeUsrCommissionPercent_0mu9lpq;
 						var commission = price * percent / 100;
-						request.$context.PDS_UsrCommission_2ik3wem = commission;
+						request.$context.PDS_UsrCommission_mxsbnle = commission;
 					}
 					/* Call the next handler if it exists and return its result. */
 					return next?.handle(request);
@@ -573,6 +491,36 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 			}
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
-		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
+		validators: /**SCHEMA_VALIDATORS*/{
+			"usr.DGValidator": {
+				validator: function (config) {
+					return function (control) {
+						let value = control.value;
+						let minValue = config.minValue;
+						let valueIsCorrect = value > minValue;
+						var result;
+						if (valueIsCorrect) {
+							result = null;
+						} else {
+							result = {
+								"usr.DGValidator": { 
+									message: config.message
+								}
+							};
+						}
+						return result;
+					};
+				},
+				params: [
+					{
+						name: "minValue"
+					},
+					{
+						name: "message"
+					}
+				],
+				async: false
+			}
+		}/**SCHEMA_VALIDATORS*/
 	};
 });
