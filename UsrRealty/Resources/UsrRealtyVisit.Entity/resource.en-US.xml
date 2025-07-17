@@ -5,6 +5,7 @@
 			<Item Name="Caption" Value="Realty Visit" />
 			<Item Name="Columns.UsrComment.Caption" Value="Comment" />
 			<Item Name="Columns.UsrOwner.Caption" Value="Owner" />
+			<Item Name="Columns.UsrParentRealty.Caption" Value="Parent Realty" />
 			<Item Name="Columns.UsrPotentialCustomer.Caption" Value="Potential Customer" />
 			<Item Name="Columns.UsrVisitDateTime.Caption" Value="Visit DateTime" />
 		</Items>
