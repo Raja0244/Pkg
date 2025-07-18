@@ -83,6 +83,34 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 			},
 			{
 				"operation": "insert",
+				"name": "Button_94x0bud",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_94x0bud_caption)#",
+					"color": "default",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"icon": "actions-button-icon",
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrRealtyCalculateAveragePriceProcess",
+							"processRunType": "ForTheSelectedPage",
+							"saveAtProcessStart": true,
+							"showNotification": true,
+							"recordIdProcessParameterName": "RealtyId"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
 				"name": "UsrName",
 				"values": {
 					"layoutConfig": {
@@ -381,11 +409,37 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 			},
 			{
 				"operation": "insert",
-				"name": "ExpansionPanel_ltela5y",
+				"name": "MultiSelect_Categories",
 				"values": {
 					"layoutConfig": {
 						"column": 2,
 						"row": 2,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.MultiSelect",
+					"label": "#ResourceString(MultiSelect_Categories_label)#",
+					"recordId": "$Id",
+					"recordRelationColumnName": "UsrParentRealty",
+					"selectSchemaName": "UsrCategoryInRealty",
+					"selectColumnName": "UsrRealtyCategory",
+					"visible": true,
+					"labelPosition": "auto",
+					"placeholder": "",
+					"tooltip": "",
+					"isModalView": true
+				},
+				"parentName": "CardContentWrapper",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "ExpansionPanel_ltela5y",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
+						"row": 3,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -411,7 +465,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 				},
 				"parentName": "CardContentWrapper",
 				"propertyName": "items",
-				"index": 2
+				"index": 3
 			},
 			{
 				"operation": "insert",
