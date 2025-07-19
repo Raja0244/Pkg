@@ -47,7 +47,7 @@
 			var entityCollection = esq.GetEntityCollection(UserConnection);
 			decimal totalUSD = 0;
 			decimal totalArea = 0;
-			01:06:23	Dmytro Gamora:	foreach(var entity in entityCollection) {
+				foreach(var entity in entityCollection) {
 				decimal price = entity.GetTypedColumnValue<decimal>(priceColumn.Name); // reading using column alias
 				decimal area = entity.GetTypedColumnValue<decimal>(areaColumn.Name); // reading using column alias
 				totalUSD = totalUSD + price;

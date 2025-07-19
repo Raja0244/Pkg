@@ -1,4 +1,4 @@
-define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
+define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/(sdk)/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
@@ -83,31 +83,52 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 			},
 			{
 				"operation": "insert",
-				"name": "Button_94x0bud",
+				"name": "Button_Actions",
 				"values": {
 					"type": "crt.Button",
-					"caption": "#ResourceString(Button_94x0bud_caption)#",
+					"caption": "#ResourceString(Button_Actions_caption)#",
 					"color": "default",
 					"disabled": false,
 					"size": "medium",
 					"iconPosition": "left-icon",
 					"visible": true,
 					"icon": "actions-button-icon",
-					"clicked": {
-						"request": "crt.RunBusinessProcessRequest",
-						"params": {
-							"processName": "UsrRealtyCalculateAveragePriceProcess",
-							"processRunType": "ForTheSelectedPage",
-							"saveAtProcessStart": true,
-							"showNotification": true,
-							"recordIdProcessParameterName": "RealtyId"
-						}
-					},
-					"clickMode": "default"
+					"clicked": {},
+					"clickMode": "menu",
+					"menuItems": []
 				},
 				"parentName": "CardToggleContainer",
 				"propertyName": "items",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "CalculateAvergePrice",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(CalculateAvergePrice_caption)#",
+					"visible": true,
+					"clicked": {},
+					"items": []
+				},
+				"parentName": "Button_Actions",
+				"propertyName": "menuItems",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "MenuItem_RunWebService",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_RunWebService_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "usr.RunWebServiceButtonRequest"
+					}
+				},
+				"parentName": "Button_Actions",
+				"propertyName": "menuItems",
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -1015,16 +1036,59 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
                 if (price >= sysvalue) {
                     /* If the request status is "New," apply the validator to the "UsrDescription" attribute. */
                     request.$context.enableAttributeValidator('PDS_UsrComment_g9h14v8', 'required');
-                } else {
+	                } 
+				else {
                     /* If the request status differs from the "New," do not apply the validator to the "UsrDescription" attribute. */
                     request.$context.disableAttributeValidator('PDS_UsrComment_g9h14v8', 'required');
-                }
-            }
+		             }
+	            }
             /* Call the next handler if it exists and return its result. */
             return next?.handle(request);
-        }
-    }
+	        }
+	    },
+			{
+				request: "usr.RunWebServiceButtonRequest",
+				/* Implementation of the custom query handler. */
+				handler: async (request, next) => {
+					console.log("Run web service button works...");
 
+					// get id from type lookup type object
+					var typeObject = await request.$context.PDS_UsrType_bf9dwtf;
+					var typeId = "";
+					if (typeObject) {
+						typeId = typeObject.value;
+					}
+
+					// get id from type lookup offer type object
+					var offerTypeObject = await request.$context.PDS_UsrOfferType_nq58gui;
+					var offerTypeId = "";
+					if (offerTypeObject) {
+						offerTypeId = offerTypeObject.value;
+					}
+
+					/* Create an instance of the HTTP client from @creatio-devkit/common. */
+					const httpClientService = new sdk.HttpClientService();
+					/* Specify the URL to run web service method. */
+					const baseUrl = Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl();
+					const transferName = "rest";
+					const serviceName = "RealtyService";
+					const methodName = "GetAveragePriceByTypeName";
+					const endpoint = Terrasoft.combinePath(baseUrl, transferName, serviceName, methodName);
+					
+					//const endpoint = "http://localhost/D1Dev/0/rest/RealtyService/GetAveragePriceByTypeName";
+					/* Send a POST HTTP request. The HTTP client converts the response body from JSON to a JS object automatically. */
+					var params = {
+						realtyTypeId: typeId,
+						realtyOfferTypeId: offerTypeId
+					};
+					const response = await httpClientService.post(endpoint, params);
+					
+					console.log("response Avg price = " + response.body.GetAveragePriceByTypeNameResult);
+					
+					/* Call the next handler if it exists and return its result. */
+					return next?.handle(request);
+				}
+			}
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{
