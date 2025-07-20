@@ -108,7 +108,16 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 					"type": "crt.MenuItem",
 					"caption": "#ResourceString(CalculateAvergePrice_caption)#",
 					"visible": true,
-					"clicked": {},
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrRealtyCalculateAveragePriceProcess",
+							"processRunType": "ForTheSelectedPage",
+							"saveAtProcessStart": true,
+							"showNotification": true,
+							"recordIdProcessParameterName": "RealtyTypeIdParameter"
+						}
+					},
 					"items": []
 				},
 				"parentName": "Button_Actions",
