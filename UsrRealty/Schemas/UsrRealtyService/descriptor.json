@@ -2,9 +2,8 @@
   "Descriptor": {
     "UId": "26acf374-e5f4-4ea4-b1b1-3cf5c57596c9",
     "Name": "UsrRealtyService",
-    "ModifiedOnUtc": "\/Date(1753337042000)\/",
+    "ModifiedOnUtc": "\/Date(1753365906000)\/",
     "ManagerName": "SourceCodeSchemaManager",
-    "Caption": "Realty Service POST",
-    "DependsOn": []
+    "Caption": "Realty Service POST"
   }
 }

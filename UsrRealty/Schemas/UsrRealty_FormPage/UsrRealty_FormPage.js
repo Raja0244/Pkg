@@ -372,28 +372,6 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 			},
 			{
 				"operation": "insert",
-				"name": "CommissionPercentage",
-				"values": {
-					"layoutConfig": {
-						"column": 2,
-						"row": 4,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"type": "crt.NumberInput",
-					"label": "$Resources.Strings.PDS_UsrOfferTypeUsrCommissionPercent_hugvg5a",
-					"control": "$PDS_UsrOfferTypeUsrCommissionPercent_hugvg5a",
-					"readonly": true,
-					"placeholder": "",
-					"labelPosition": "auto",
-					"tooltip": ""
-				},
-				"parentName": "GeneralInfoTabContainer",
-				"propertyName": "items",
-				"index": 7
-			},
-			{
-				"operation": "insert",
 				"name": "ExpansionPanel_of5v9rl",
 				"values": {
 					"type": "crt.ExpansionPanel",
@@ -470,33 +448,6 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 			},
 			{
 				"operation": "insert",
-				"name": "GridDetailAddBtn_jfpxrj4",
-				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(GridDetailAddBtn_jfpxrj4_caption)#",
-					"icon": null,
-					"iconPosition": "only-text",
-					"color": "outline",
-					"size": "small",
-					"clicked": {
-						"request": "crt.RunBusinessProcessRequest",
-						"params": {
-							"processName": "UsrAddAutomaticVisitDateProcess",
-							"processRunType": "ForTheSelectedPage",
-							"saveAtProcessStart": true,
-							"showNotification": true,
-							"recordIdProcessParameterName": "RealtyIdParameter"
-						}
-					},
-					"visible": true,
-					"clickMode": "default"
-				},
-				"parentName": "FlexContainer_i9vv72u",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
 				"name": "GridDetailRefreshBtn_nrvf164",
 				"values": {
 					"type": "crt.Button",
@@ -517,7 +468,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 				},
 				"parentName": "FlexContainer_i9vv72u",
 				"propertyName": "items",
-				"index": 1
+				"index": 0
 			},
 			{
 				"operation": "insert",
@@ -534,7 +485,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 				},
 				"parentName": "FlexContainer_i9vv72u",
 				"propertyName": "items",
-				"index": 2
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -605,6 +556,33 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 				},
 				"parentName": "FlexContainer_i9vv72u",
 				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GridDetailAddBtn_jfpxrj4",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(GridDetailAddBtn_jfpxrj4_caption)#",
+					"icon": null,
+					"iconPosition": "only-text",
+					"color": "outline",
+					"size": "small",
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrAddAutomaticVisitDateProcess",
+							"processRunType": "ForTheSelectedPage",
+							"saveAtProcessStart": true,
+							"showNotification": true,
+							"recordIdProcessParameterName": "RealtyIdParameter"
+						}
+					},
+					"visible": true,
+					"clickMode": "default"
+				},
+				"parentName": "FlexContainer_i9vv72u",
+				"propertyName": "items",
 				"index": 3
 			},
 			{
@@ -664,6 +642,18 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 					"fitContent": true,
 					"primaryColumnName": "GridDetail_h5egb6lDS_Id",
 					"columns": [
+						{
+							"id": "a8cc4d38-d857-3d60-3483-7834dc38f759",
+							"code": "GridDetail_h5egb6lDS_UsrVisitDateTime",
+							"caption": "#ResourceString(GridDetail_h5egb6lDS_UsrVisitDateTime)#",
+							"dataValueType": 7
+						},
+						{
+							"id": "63d0fa5b-2b77-7099-a8d9-7c7e61687e53",
+							"code": "GridDetail_h5egb6lDS_UsrPotentialCustomer",
+							"caption": "#ResourceString(GridDetail_h5egb6lDS_UsrPotentialCustomer)#",
+							"dataValueType": 10
+						},
 						{
 							"id": "30daf2b4-b40a-bc4d-2ba4-7e5a5c954b0e",
 							"code": "GridDetail_h5egb6lDS_UsrComment",
@@ -850,6 +840,16 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 						},
 						"viewModelConfig": {
 							"attributes": {
+								"GridDetail_h5egb6lDS_UsrVisitDateTime": {
+									"modelConfig": {
+										"path": "GridDetail_h5egb6lDS.UsrVisitDateTime"
+									}
+								},
+								"GridDetail_h5egb6lDS_UsrPotentialCustomer": {
+									"modelConfig": {
+										"path": "GridDetail_h5egb6lDS.UsrPotentialCustomer"
+									}
+								},
 								"GridDetail_h5egb6lDS_UsrComment": {
 									"modelConfig": {
 										"path": "GridDetail_h5egb6lDS.UsrComment"
@@ -932,6 +932,12 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 						"config": {
 							"entitySchemaName": "UsrRealtyVisit",
 							"attributes": {
+								"UsrVisitDateTime": {
+									"path": "UsrVisitDateTime"
+								},
+								"UsrPotentialCustomer": {
+									"path": "UsrPotentialCustomer"
+								},
 								"UsrComment": {
 									"path": "UsrComment"
 								}

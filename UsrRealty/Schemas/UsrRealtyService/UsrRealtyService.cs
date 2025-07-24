@@ -1,53 +1,50 @@
- namespace Terrasoft.Configuration
+namespace Terrasoft.Configuration
 {
-    using System;
-    using System.ServiceModel;
-    using System.ServiceModel.Activation;
-    using System.ServiceModel.Web;
-    using System.Web.SessionState;
-    using Terrasoft.Core.DB;
-    using Terrasoft.Web.Common;
+using System;
+using System.ServiceModel;
+using System.ServiceModel.Web;
+using System.ServiceModel.Activation;
+using System.Web.SessionState;
+using Terrasoft.Core;
+using Terrasoft.Core.DB;
+using Terrasoft.Web.Common;
 
-    [ServiceContract]
-    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
-    public class RealtyService : BaseService, IReadOnlySessionState
+[ServiceContract]
+[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
+public class RealtyService : BaseService, IReadOnlySessionState
+{
+    [OperationContract]
+    [WebInvoke(Method = "POST", BodyStyle = WebMessageBodyStyle.Wrapped,
+        RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+    public decimal GetAveragePriceByTypeName(string realtyTypeId/*, string realtyOfferTypeId*/)
     {
-        [OperationContract]
-        [WebInvoke(Method = "POST", BodyStyle = WebMessageBodyStyle.Wrapped,
-            RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-        public decimal GetAveragePriceByTypeName(string realtyTypeId, string realtyOfferTypeId)
+        if (string.IsNullOrEmpty(realtyTypeId))
         {
-            if (string.IsNullOrEmpty(realtyTypeId) || string.IsNullOrEmpty(realtyOfferTypeId))
-            {
-                return -1;
-            }
-        private Guid GetLookupIdByName(string "UsrRealty", string "Name", string "Sale")
-        {
-            Select select = new Select(UserConnection)
-                .Top(1)
-                .Column("Id")
-                .From("UsrRealty")
-                .Where("Name").IsEqual(Column.Parameter("Sale"))
-                as Select;
-            return select.ExecuteScalar<Guid>(realtyOfferTypeId);
+            return -1;
         }
-            Select select = new Select(UserConnection)
-                .Column(Func.Avg("UsrPrice"))
-                .From("UsrRealty")
-                .Where("UsrRealtyTypeId").IsEqual(Column.Parameter(new Guid(realtyTypeId)))
-                .And("UsrRealtyOfferTypeId").IsEqual(Column.Parameter(new Guid(realtyOfferTypeId))) // fixed column name
-                as Select;
+		Guid realtyOfferTypeId = ((Select)new Select(UserConnection)
+			    .Column("Id")
+			    .From("UsrOfferType")
+			    .Where("Name").IsEqual(Column.Parameter("Sale")))
+				.ExecuteScalar<Guid>();
 
-            decimal result = select.ExecuteScalar<decimal>();
-            return Math.Round(result, 2);
-        }
+        var select = new Select(UserConnection)
+            .Column(Func.Avg("UsrPrice")) 
+            .From("UsrRealty")
+            .Where("UsrTypeId").IsEqual(Column.Parameter(new Guid(realtyTypeId)))
+            .And("UsrOfferTypeId").IsEqual(Column.Parameter(realtyOfferTypeId)) 
+            as Select;
 
-        [OperationContract]
-        [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped,
-            RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-        public string GetExample()
-        {
-            return "OK!";
-        }
+        decimal result = select.ExecuteScalar<decimal>();
+	    return Math.Round(result, 2);
     }
+
+    [OperationContract] 
+    [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped,
+        RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+    public string GetExample()
+    {
+        return "OK!";
+    }
+}
 }

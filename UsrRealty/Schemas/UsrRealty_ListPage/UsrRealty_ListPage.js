@@ -29,36 +29,34 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 							"id": "f252f581-0ccf-44ac-b7c9-c00df2ad9919",
 							"code": "PDS_UsrName",
 							"caption": "#ResourceString(PDS_UsrName)#",
-							"dataValueType": 1
+							"dataValueType": 1,
+							"width": 146
 						},
 						{
 							"id": "6d1237fa-9917-a670-fab7-d22867ff77df",
 							"code": "PDS_UsrType",
 							"caption": "#ResourceString(PDS_UsrType)#",
-							"dataValueType": 10
+							"dataValueType": 10,
+							"width": 143
 						},
 						{
 							"id": "bfae38ef-d06f-0a8e-a009-e739d1addfe4",
 							"code": "PDS_UsrOfferType",
 							"caption": "#ResourceString(PDS_UsrOfferType)#",
-							"dataValueType": 10
+							"dataValueType": 10,
+							"width": 131
 						},
 						{
 							"id": "6a0288d6-1c10-a5cb-9688-f6c395b42c0b",
 							"code": "PDS_UsrPrice",
 							"caption": "#ResourceString(PDS_UsrPrice)#",
-							"dataValueType": 32
+							"dataValueType": 32,
+							"width": 121
 						},
 						{
 							"id": "1903f5bb-5c97-0bcd-f957-7a3f4ababebc",
 							"code": "PDS_UsrArea",
 							"caption": "#ResourceString(PDS_UsrArea)#",
-							"dataValueType": 32
-						},
-						{
-							"id": "0429662e-5c73-77e8-a8b0-cf2bd7397cac",
-							"code": "PDS_UsrOfferTypeUsrCommissionPercent",
-							"caption": "#ResourceString(PDS_UsrOfferTypeUsrCommissionPercent)#",
 							"dataValueType": 32
 						},
 						{
@@ -104,11 +102,6 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 					"PDS_UsrArea": {
 						"modelConfig": {
 							"path": "PDS.UsrArea"
-						}
-					},
-					"PDS_UsrOfferTypeUsrCommissionPercent": {
-						"modelConfig": {
-							"path": "PDS.UsrOfferTypeUsrCommissionPercent"
 						}
 					},
 					"PDS_CreatedOn": {
@@ -175,10 +168,6 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 						},
 						"UsrArea": {
 							"path": "UsrArea"
-						},
-						"UsrOfferTypeUsrCommissionPercent": {
-							"type": "ForwardReference",
-							"path": "UsrOfferType.UsrCommissionPercent"
 						},
 						"CreatedOn": {
 							"path": "CreatedOn"
