@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "fe145689-2d00-4836-a7c6-c53c18ab2e91",
+    "Name": "UsrRealtyEvent",
+    "ModifiedOnUtc": "\/Date(1753336412000)\/",
+    "ManagerName": "SourceCodeSchemaManager",
+    "Caption": "Realty Event Example",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "4cfd13d7-57e9-4b92-9241-bade1db38d82",
+    "Name": "UsrAddAutomaticVisitDateProcess",
+    "ModifiedOnUtc": "\/Date(1753338734000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Add Automatic Visit Date Process",
+    "DependsOn": []
+  }
+}
