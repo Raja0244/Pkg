@@ -24,7 +24,7 @@ public class RealtyService : BaseService, IReadOnlySessionState
         }
 		Guid realtyOfferTypeId = ((Select)new Select(UserConnection)
 			    .Column("Id")
-			    .From("UsrOfferType")
+			    .From("UsrRealtyOfferType")
 			    .Where("Name").IsEqual(Column.Parameter("Sale")))
 				.ExecuteScalar<Guid>();
 

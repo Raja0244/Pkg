@@ -9,7 +9,7 @@
 			<Item Name="LocalizableStrings.addRecord_tmgd8lv_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_xvr9yz4_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.AreaCannotBeLess.Value" Value="Area must be greater than Zero" />
-			<Item Name="LocalizableStrings.Button_yh27dlw_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.Button_AvgPrice_caption.Value" Value="Avg Price" />
 			<Item Name="LocalizableStrings.ExpansionPanel_of5v9rl_title.Value" Value="Realty Visit list" />
 			<Item Name="LocalizableStrings.GridDetailAddBtn_jfpxrj4_caption.Value" Value="Add Visits" />
 			<Item Name="LocalizableStrings.GridDetailExportDataBtn_g6oznnx_caption.Value" Value="Export to Excel" />

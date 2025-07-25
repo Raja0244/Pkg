@@ -3,6 +3,8 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Realty list page" />
+			<Item Name="LocalizableStrings.Button_7bvprsd_caption.Value" Value="Avg Price" />
+			<Item Name="LocalizableStrings.MenuItem_qravah4_caption.Value" Value="Run Web Service to Calculate Avg Price" />
 		</Items>
 	</Group>
 </Resources>

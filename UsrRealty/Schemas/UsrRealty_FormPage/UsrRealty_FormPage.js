@@ -65,13 +65,13 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 			},
 			{
 				"operation": "insert",
-				"name": "Button_yh27dlw",
+				"name": "Button_AvgPrice",
 				"values": {
 					"type": "crt.Button",
-					"caption": "#ResourceString(Button_yh27dlw_caption)#",
-					"color": "default",
+					"caption": "#ResourceString(Button_AvgPrice_caption)#",
+					"color": "outline",
 					"disabled": false,
-					"size": "large",
+					"size": "medium",
 					"iconPosition": "only-text",
 					"visible": true,
 					"menuItems": [],
@@ -92,7 +92,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 						"request": "usr.RunWebServiceButtonRequest"
 					}
 				},
-				"parentName": "Button_yh27dlw",
+				"parentName": "Button_AvgPrice",
 				"propertyName": "menuItems",
 				"index": 0
 			},
@@ -954,9 +954,11 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 	        handler: async (request, next) => {
             /* Check the request status. */
             if (request.attributeName === 'PDS_UsrPrice_amz5w94') {
-                const Comment = 'PDS_UsrComment_mc2ouh1';
-                const sysvalue = await Terrasoft.SysSettings.querySysSettingsItem("MinPriceToRequireRealtyComment");
-                const price = await request.$context.PDS_UsrPrice_amz5w94;
+                price = await request.$context.PDS_UsrPrice_amz5w94;
+                const sysSettingsService = new sdk.SysSettingsService();
+				const SystemSetting = await sysSettingsService.getByCode('MinPriceToRequireRealtyComment');
+                    const sysvalue=SystemSetting.value;
+				console.log("price"+ price);                console.log("sysvalue "+ sysvalue);
                 /* Check the request description. */
                 if (price >= sysvalue) {
                     /* If the request status is "New," apply the validator to the "UsrDescription" attribute. */
